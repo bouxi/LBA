@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+.contenu {
+    display: grid;
+    grid-template-areas:
+            "header header"
+            "section1 section2"
+            "footer footer";
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+ul {
+    list-style-type: armenian;
+}
+
+header {
+    grid-area: header;
+    grid-column: 1 / 13;
+    grid-row: 1;
+    background-color: dodgerblue;
+}
+
+.section1 {
+    grid-area: section1;
+    grid-column: 1 / 2;
+    grid-row: 2;
+    background-color: beige;
+}
+
+.section2 {
+    background-color: blueviolet;
+    grid-area: section2;
+    grid-column: 2 / 13;
+    grid-row: 2;
+}
+
+footer {
+    grid-area: footer;
+    grid-column: 1 / 13;
+    grid-row: 3;
+}
+
+/* Exemple sticky-footer.html Grafikart */
+
+html, body {
+    margin: 0;
+    height: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+}
+header {
+    height: 60px;
+}
+footer {
+    height: 60px;
+    margin-top: auto;
+    flex: none;
+}
+main {
+    display: flex;
+    flex: 1 0;
+}
+article {
+    flex: 1 1;
+}
+aside {
+    width: 250px;
+    flex: none;
+}
